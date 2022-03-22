@@ -5,7 +5,7 @@ class App extends React.Component {
         <h1>Slot Machines !</h1>
         <Machine machineNumber='1'
                  s1='🍒'
-                 s2='🍊'
+                 s2='🍒'
                  s3='🍒'
         />
         <Machine machineNumber='2'
