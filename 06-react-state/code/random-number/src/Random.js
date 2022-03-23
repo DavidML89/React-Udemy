@@ -16,7 +16,10 @@ class Random extends Component {
     return (
       <div className='Random'>
         <h1>Number is : {this.state.number}</h1>
-        <button onClick={this.genRandomNum}>Random number</button>
+        { this.state.number === 7
+            ? <h2> You Win darling :) </h2>
+            : <button onClick={this.genRandomNum}>Random number</button>
+        }
       </div>
     )
   }
