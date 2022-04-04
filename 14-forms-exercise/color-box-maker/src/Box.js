@@ -10,7 +10,7 @@ class Box extends Component {
           width:`${this.props.width}px`
           }}
         />
-        <button onClick={this.remove}>X</button>
+        <button onClick={this.props.remove}>X</button>
       </div>
     )
   }
