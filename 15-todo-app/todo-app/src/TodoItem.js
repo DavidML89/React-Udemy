@@ -4,7 +4,8 @@ class TodoItem extends Component {
   render() {
     return (
       <div>
-        <h1>{this.props.task}</h1>
+        <p>{this.props.task}</p>
+        <button onClick={this.props.remove}>X</button>
       </div>
     )
   }
