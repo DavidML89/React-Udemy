@@ -22,6 +22,16 @@ class TodoList extends Component {
     })
   }
 
+  updateItem = (id, updatedTask) => {
+    const updatedTodos = this.state.todoItems.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, task: updatedTask };
+      }
+        return todo;
+    });
+    this.setState({ todoItems: updatedTodos });
+  }
+
   render() {
     const todoItems = this.state.todoItems.map(item => (
       <TodoItem
@@ -29,6 +39,7 @@ class TodoList extends Component {
         key={item.id}
         task={item.task}
         remove={() => this.removeItem(item.id)}
+        update={this.updateItem}
         />
     ))
     return (
