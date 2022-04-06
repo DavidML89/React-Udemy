@@ -32,14 +32,26 @@ class TodoList extends Component {
     this.setState({ todoItems: updatedTodos });
   }
 
+  toggleCompletion = (id) => {
+    const updatedTodos = this.state.todoItems.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, completed: !todo.completed };
+      }
+      return todo;
+    });
+    this.setState({ todoItems: updatedTodos})
+  }
+
   render() {
     const todoItems = this.state.todoItems.map(item => (
       <TodoItem
         id={item.id}
         key={item.id}
         task={item.task}
+        completed={item.completed}
         remove={() => this.removeItem(item.id)}
         update={this.updateItem}
+        toggleTodo={() => this.toggleCompletion(item.id)}
         />
     ))
     return (
