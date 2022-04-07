@@ -1,0 +1,12 @@
+.TodoList {
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  max-width: 500px;
+  padding: 20px;
+  justify-items: center;
+  color: white;
+}
+
+.TodoList ul {
+  list-style: none;
+}

@@ -1,3 +1,8 @@
+.TodoItem {
+  background-color: rgb(255,255,255,0.1);
+  display: flex;
+}
+
 .completed {
   text-decoration: line-through;
 }
