@@ -1,5 +1,5 @@
 .TodoItem {
-  background-color: rgb(255,255,255,0.5);
+  background-color: rgb(255,255,255,0.15);
   display: flex;
   justify-content: space-between;
   padding: 0.7rem;

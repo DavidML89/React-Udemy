@@ -32,9 +32,7 @@ class NewTodoForm extends Component {
             onChange={this.handleChange}
             placeholder='Task Description'
           />
-        <div className="NewTodoForm-button">
           <button>Create Item</button>
-        </div>
       </form>
     )
   }

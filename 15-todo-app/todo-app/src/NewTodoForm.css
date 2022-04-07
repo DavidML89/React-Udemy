@@ -6,15 +6,18 @@
 .NewTodoForm label {
   min-width: 100%;
   text-align: left;
+  margin-top: 0.5rem;
 }
 
 .NewTodoForm input {
   flex-grow: 1;
+  padding: 1rem;
 }
 
 .NewTodoForm button {
   min-width: 100%;
   border: none;
   color: white;
-  background-color: ;
+  background-color: rgb(255,255,255,0.15);
+  padding: 1rem;
 }
