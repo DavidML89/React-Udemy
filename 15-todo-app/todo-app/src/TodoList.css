@@ -1,12 +1,13 @@
 .TodoList {
   background-color: rgba(0, 0, 0, 0.5);
-  
-  max-width: 500px;
-  padding: 20px;
+  background-color: #588d98;
+  width: 500px;
+  padding: 1rem;
   justify-items: center;
   color: white;
 }
 
 .TodoList ul {
   list-style: none;
+  padding: 0;
 }

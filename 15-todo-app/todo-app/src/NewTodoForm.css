@@ -1,0 +1,20 @@
+.NewTodoForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.NewTodoForm label {
+  min-width: 100%;
+  text-align: left;
+}
+
+.NewTodoForm input {
+  flex-grow: 1;
+}
+
+.NewTodoForm button {
+  min-width: 100%;
+  border: none;
+  color: white;
+  background-color: ;
+}

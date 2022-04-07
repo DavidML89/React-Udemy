@@ -52,16 +52,20 @@ class TodoItem extends Component {
       )
     } else {
       result = (
-        <li className="TodoItem">
-          <p className={this.props.completed ? 'completed' : ''}
+        <div className="TodoItem">
+          <li className={this.props.completed ? 'TodoItem-task completed' : 'TodoItem-task'}
             onClick={this.handleToggle}>
             {this.props.task}
-          </p>
-          <button onClick={this.toggleForm}>
-            <i class="far fa-edit"></i>
-          </button>
-          <button onClick={this.props.remove}>X</button>
-        </li>
+          </li>
+          <div className="TodoItem-buttons">
+            <button onClick={this.toggleForm}>
+              <i class="far fa-edit"></i>
+            </button>
+            <button onClick={this.props.remove}>
+              <i class="far fa-trash-alt"></i>
+            </button>
+          </div>
+        </div>
       )
     }
     return result;

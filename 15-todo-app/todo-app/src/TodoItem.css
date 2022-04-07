@@ -1,8 +1,30 @@
 .TodoItem {
-  background-color: rgb(255,255,255,0.1);
+  background-color: rgb(255,255,255,0.5);
   display: flex;
+  justify-content: space-between;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+}
+
+.TodoItem-Task {
+  flex: 1 0 auto;
+}
+
+.TodoIteam i {
+  background-color: none;
+  color: white;
 }
 
 .completed {
   text-decoration: line-through;
+}
+
+.TodoItem-buttons {
+  background-color: none;
+}
+
+.TodoItem-buttons button {
+  color: white;
+  border: 0;
+  margin: 0.5rem;
 }
