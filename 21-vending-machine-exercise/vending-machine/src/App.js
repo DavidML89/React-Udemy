@@ -3,17 +3,13 @@ import './App.css';
 import VendingMachine from './VendingMachine';
 import Chips from './Chips';
 import Mars from './Mars';
+import Navbar from './Navbar';
 import OrangeJuice from "./OrangeJuice";
 
 function App() {
   return (
     <div className="App">
-      <nav>
-        <Link to='/'>Vending Machine</ Link>
-        <Link to='/chips'>Chips</ Link>
-        <Link to='/mars'>Mars</ Link>
-        <Link to='/orangejuice'>Orange juice</ Link>
-      </nav>
+      <Navbar />
       <Routes>
         <Route exact path='/' element={<VendingMachine />} />
         <Route exact path='/chips' element={<Chips />} />

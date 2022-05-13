@@ -1,0 +1,10 @@
+.Message {
+  color: blue;
+  font-size: large;
+  background-color: bisque;
+  border-radius: 5px;
+  /* width: 300px; */
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}

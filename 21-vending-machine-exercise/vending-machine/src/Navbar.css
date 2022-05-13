@@ -1,0 +1,14 @@
+.Navbar {
+  background-color: blueviolet;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Navbar a {
+  text-decoration: none;
+}
+
+.active {
+  color: yellow;
+}
