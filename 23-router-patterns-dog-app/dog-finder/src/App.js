@@ -1,4 +1,5 @@
 import { Component } from "react";
+import AllRoutes from "./AllRoutes";
 import './App.css';
 import Navbar from './Navbar';
 
@@ -41,6 +42,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar dogs={this.props.dogs} />
+        <AllRoutes />
       </div>
     );
   }
