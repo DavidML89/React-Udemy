@@ -2,6 +2,9 @@ import { Component } from "react";
 import AllRoutes from "./AllRoutes";
 import './App.css';
 import Navbar from './Navbar';
+import whiskey from "./images/whiskey.jpg";
+import tubby from "./images/tubby.jpg";
+import hazel from "./images/hazel.jpg";
 
 class App extends Component {
   static defaultProps = {
@@ -9,7 +12,7 @@ class App extends Component {
       {
         name: "Whiskey",
         age: 5,
-        src: './images/whiskey.jpg',
+        src: whiskey,
         facts: [
           "Whiskey loves eating popcorn.",
           "Whiskey is a terrible guard dog.",
@@ -19,7 +22,7 @@ class App extends Component {
       {
         name: "Hazel",
         age: 3,
-        src: './images/hazel.jpg',
+        src: hazel,
         facts: [
           "Hazel has soooo much energy!",
           "Hazel is highly intelligent.",
@@ -29,7 +32,7 @@ class App extends Component {
       {
         name: "Tubby",
         age: 4,
-        src: './images/tubby.jpg',
+        src: tubby,
         facts: [
           "Tubby is not the brightest dog",
           "Tubby does not like walks or exercise.",
@@ -42,7 +45,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar dogs={this.props.dogs} />
-        <AllRoutes />
+        <AllRoutes dogs={this.props.dogs}/>
       </div>
     );
   }
