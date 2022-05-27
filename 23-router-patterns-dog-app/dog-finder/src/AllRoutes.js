@@ -6,17 +6,18 @@ import DogDetails from './DogDetails';
 
 class AllRoutes extends Component {
   render() {
-    let dog = props => {
-      let name = props.value.matches.params.name;
-      let currentDog = this.props.dogs.find(
-        dog => dog.name.toLowerCase() === name.toLowerCase()
-      );
-      return <DogDetails {...props} dog={currentDog} />
-    }
+    // const getDog = props => {
+    //   let name = props.match.params.name;
+    //   let currentDog = this.props.dogs.find(
+    //     dog => dog.name.toLowerCase() === name.toLowerCase()
+    //     );
+    //     console.log(currentDog)
+    //   return <DogDetails {...props} dog={currentDog} />;
+    // }
     return (
       <Routes>
         <Route path="/dogs" element={<DogsList dogs={this.props.dogs} />} />
-        <Route path="/dogs/:name" exact element={dog} />
+        <Route path="/dogs/:name" element={<DogDetails />} />
       </Routes>
   )}
 }
