@@ -4,7 +4,7 @@ import Paper from "@mui/material/Paper";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 
-export default function TodoList({ todos, removeTodo, toggleTodo }) {
+export default function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
   return (
     <Paper>
       <List>
@@ -16,6 +16,7 @@ export default function TodoList({ todos, removeTodo, toggleTodo }) {
             key={todo.id}
             removeTodo={removeTodo}
             toggleTodo={toggleTodo}
+            editTodo={editTodo}
           />
         ))}
       </List>
