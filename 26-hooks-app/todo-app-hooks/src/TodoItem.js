@@ -2,10 +2,10 @@ import { Checkbox, ListItem, ListItemText, IconButton, ListItemSecondaryAction }
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import React from "react";
-export default function TodoItem({ id, task, completed, removeTodo }) {
+export default function TodoItem({ id, task, completed, removeTodo, toggleTodo }) {
   return (
     <ListItem>
-      <Checkbox checked={completed} />
+      <Checkbox checked={completed} onClick={() => toggleTodo(id)} />
       <ListItemText>
         {task}
       </ListItemText>
