@@ -6,16 +6,20 @@ import Paper from "@mui/material/Paper";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Grid from "@mui/material/Grid";
-import { Grid3x3 } from '@mui/icons-material';
+import { v4 as uuid } from "uuid";
 
 function TodoApp() {
   const initialTodos = [
-    { id: 1, task: "Example", completed: false},
-    { id: 2, task: "Walk the cat", completed: false}
+    { id: '55465413-8a2d-4476-8496-9d66678b1443', task: "Example", completed: false},
+    { id: '4535910e-6c4f-44f5-980f-09b3aef8baed', task: "Walk the cat", completed: false}
   ];
   const [todos, setTodos] = useState(initialTodos);
   const addTodo = newTodoText => {
-    setTodos([...todos, { id: 4, task: newTodoText, completed: false }])
+    setTodos([...todos, { id: uuid(), task: newTodoText, completed: false }])
+  };
+  const removeTodo = todoId => {
+    const updatedTodos = todos.filter(todo => todo.id !== todoId);
+    setTodos(updatedTodos);
   };
   return (
     <Paper
@@ -35,7 +39,7 @@ function TodoApp() {
       <Grid container justifyContent="center" style={{ marginTop: "1rem" }}>
         <Grid item xs={11} md={8} lg={4}>
           <TodoForm addTodo={addTodo} />
-          <TodoList todos={todos} />
+          <TodoList todos={todos} removeTodo={removeTodo}/>
         </Grid>
       </Grid>
     </Paper>

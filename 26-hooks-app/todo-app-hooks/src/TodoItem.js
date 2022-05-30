@@ -1,8 +1,8 @@
-import { Checkbox, ListItem, ListItemText, IconButton, Button, ListItemSecondaryAction } from "@mui/material";
+import { Checkbox, ListItem, ListItemText, IconButton, ListItemSecondaryAction } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import React from "react";
-export default function TodoItem({ task, completed }) {
+export default function TodoItem({ id, task, completed, removeTodo }) {
   return (
     <ListItem>
       <Checkbox checked={completed} />
@@ -10,7 +10,7 @@ export default function TodoItem({ task, completed }) {
         {task}
       </ListItemText>
       <ListItemSecondaryAction>
-        <IconButton aria-label="delete">
+        <IconButton aria-label="delete" onClick={() => removeTodo(id)}>
           <DeleteIcon />
         </IconButton>
         <IconButton aria-label="edit">
