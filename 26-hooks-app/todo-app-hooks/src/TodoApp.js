@@ -6,6 +6,7 @@ import Paper from "@mui/material/Paper";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Grid from "@mui/material/Grid";
+import { Grid3x3 } from '@mui/icons-material';
 
 function TodoApp() {
   const initialTodos = [
@@ -31,8 +32,12 @@ function TodoApp() {
           <Typography color='inherit'>TODOS WITH HOOKS</Typography>
         </Toolbar>
       </AppBar>
-      <TodoList todos={todos} />
-      <TodoForm addTodo={addTodo} />
+      <Grid container justifyContent="center" style={{ marginTop: "1rem" }}>
+        <Grid item xs={11} md={8} lg={4}>
+          <TodoForm addTodo={addTodo} />
+          <TodoList todos={todos} />
+        </Grid>
+      </Grid>
     </Paper>
   );
 }
