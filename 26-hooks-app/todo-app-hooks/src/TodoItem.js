@@ -4,11 +4,11 @@ import useToggleState from "./hooks/useToggleState"
 import { Checkbox, ListItem, ListItemText, IconButton, ListItemSecondaryAction } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import { TodosContext } from "./contexts/todos.context"
+import { DispatchContext } from "./contexts/todos.context"
 
 
 export default function TodoItem({ id, task, completed }) {
-  const { dispatch } = useContext(TodosContext)
+  const dispatch = useContext(DispatchContext)
   const [isEditing, toggleEditing] = useToggleState(false);
   return (
     <ListItem>

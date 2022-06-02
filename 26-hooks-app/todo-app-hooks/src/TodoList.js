@@ -6,7 +6,7 @@ import Divider from "@mui/material/Divider";
 import { TodosContext } from "./contexts/todos.context"
 
 export default function TodoList() {
-  const { todos } = useContext(TodosContext)
+  const todos = useContext(TodosContext)
   return (
     <Paper>
       <List>
