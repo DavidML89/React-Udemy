@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from "react";
 import TodoItem from './TodoItem';
 import Paper from "@mui/material/Paper";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
+import { TodosContext } from "./contexts/todos.context"
 
-export default function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
+export default function TodoList() {
+  const { todos } = useContext(TodosContext)
   return (
     <Paper>
       <List>
@@ -14,9 +16,6 @@ export default function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
             task={todo.task}
             completed={todo.completed}
             key={todo.id}
-            removeTodo={removeTodo}
-            toggleTodo={toggleTodo}
-            editTodo={editTodo}
           />
         ))}
       </List>

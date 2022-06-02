@@ -14,7 +14,7 @@ function TodoApp() {
     { id: '55465413-8a2d-4476-8496-9d66678b1443', task: "Example 1", completed: false},
     { id: '4535910e-6c4f-44f5-980f-09b3aef8baed', task: "Example 2", completed: false}
   ];
-  const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(initialTodos);
+  const { todos } = useTodoState(initialTodos);
   return (
     <Paper
       style={{
@@ -33,13 +33,8 @@ function TodoApp() {
       <Grid container justifyContent="center" style={{ marginTop: "1rem" }}>
         <Grid item xs={11} md={8} lg={4}>
           <TodosProvider>
-            <TodoForm addTodo={addTodo} />
-            <TodoList
-              todos={todos}
-              removeTodo={removeTodo}
-              toggleTodo={toggleTodo}
-              editTodo={editTodo}
-            />
+            <TodoForm />
+            <TodoList />
           </TodosProvider>
         </Grid>
       </Grid>
