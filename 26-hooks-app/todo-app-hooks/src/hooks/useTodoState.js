@@ -12,10 +12,6 @@ export default initialTodos => {
       const updatedTodos = todos.filter(todo => todo.id !== todoId);
       setTodos(updatedTodos);
     },
-    removeTodo: todoId => {
-      const updatedTodos = todos.filter(todo => todo.id !== todoId);
-      setTodos(updatedTodos);
-    },
     toggleTodo: todoId => {
       const updatedTodos = todos.map(todo =>
         todo.id === todoId ? {...todo, completed: !todo.completed } : todo

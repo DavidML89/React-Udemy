@@ -5,13 +5,13 @@ import TextField from "@mui/material/TextField";
 import { TodosContext } from "./contexts/todos.context"
 
 export default function TodoForm() {
-  const { addTodo } = useContext(TodosContext);
+  const { dispatch } = useContext(TodosContext);
   const [value, handleChange, reset] = useInputState("");
   return (
     <Paper>
       <form onSubmit={e=> {
         e.preventDefault();
-        addTodo(value);
+        dispatch({ type: "ADD", task: value })
         reset();
       }}
       >

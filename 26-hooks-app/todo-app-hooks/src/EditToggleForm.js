@@ -4,12 +4,12 @@ import TextField from "@mui/material/TextField";
 import { TodosContext } from "./contexts/todos.context"
 
 export default function EditToggleForm({ id, task, toggleEditForm }) {
-  const { editTodo } = useContext(TodosContext)
+  const { dispatch } = useContext(TodosContext)
   const [value, handleChange, reset] = useInputState(task);
   return (
     <form onSubmit={e => {
       e.preventDefault();
-      editTodo(id, value);
+      dispatch({ type: "EDIT", id: id, newTask: value });
       reset();
       toggleEditForm();
     }}>

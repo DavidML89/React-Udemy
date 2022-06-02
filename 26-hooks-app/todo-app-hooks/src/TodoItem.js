@@ -8,7 +8,7 @@ import { TodosContext } from "./contexts/todos.context"
 
 
 export default function TodoItem({ id, task, completed }) {
-  const { removeTodo, toggleTodo } = useContext(TodosContext)
+  const { dispatch } = useContext(TodosContext)
   const [isEditing, toggleEditing] = useToggleState(false);
   return (
     <ListItem>
@@ -20,12 +20,12 @@ export default function TodoItem({ id, task, completed }) {
         />
       ) : (
         <>
-          <Checkbox checked={completed} onClick={() => toggleTodo(id)} />
+          <Checkbox checked={completed} onClick={() => dispatch({ type: "TOGGLE", id: id })} />
           <ListItemText>
             {task}
           </ListItemText>
           <ListItemSecondaryAction>
-            <IconButton aria-label="delete" onClick={() => removeTodo(id)}>
+            <IconButton aria-label="delete" onClick={() => dispatch({ type: "REMOVE", id: id })}>
               <DeleteIcon />
             </IconButton>
             <IconButton aria-label="edit" onClick={toggleEditing}>
