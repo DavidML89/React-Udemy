@@ -1,6 +1,9 @@
+import Link from "next/link"
+
 const Index = () => (
   <div>
-    <h1>Hello ladies</h1>
+    <Link href="/about"><a>About page</a></Link>
+    <h1>Hello ladies and gentlemen</h1>
   </div>
 );
 
