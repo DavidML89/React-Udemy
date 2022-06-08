@@ -1,4 +1,5 @@
 import axios from "axios";
+import Link from "next/link";
 
 const Index = ({ posts }) => (
   <div>
@@ -6,7 +7,7 @@ const Index = ({ posts }) => (
     <ul>
       {posts.map(post => (
         <li key={post.id}>
-          {post.title}
+          <Link href={`/post?id=${post.id}`}><a>{post.title}</a></Link>
         </li>
       ))}
     </ul>
