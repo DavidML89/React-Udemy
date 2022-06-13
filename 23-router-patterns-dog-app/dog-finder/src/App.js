@@ -1,4 +1,5 @@
-import { Component } from "react";
+import React, { Component } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
 import AllRoutes from "./AllRoutes";
 import './App.css';
 import Navbar from './Navbar';
@@ -43,9 +44,11 @@ class App extends Component {
   }
   render () {
     return (
-      <div className="App">
+      <div>
         <Navbar dogs={this.props.dogs} />
-        <AllRoutes dogs={this.props.dogs} />
+        <div className='container'>
+          <AllRoutes dogs={this.props.dogs} />
+        </div>
       </div>
     );
   }
